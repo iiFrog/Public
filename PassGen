@@ -1,0 +1,95 @@
+import random
+l = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,q,y,z'
+lower = l.split(',')
+u = l.upper()
+upper = u.split(',')
+num = '1,2,3,4,5,6,7,8,9'
+numS = num.split(',')
+special = ",',-,_,+,=,\,',;,:,!,@,#,$,%,^,&,*,(,),?,/,<,>,."
+splitS = special.split(',')
+
+numbers = num.split(',')
+choice1 = ('N','LL','UL')
+q = input('Generate a Weak password [V], a normal password [W], or a strong password [S]?\n')
+def weakPass(): # Generates a weak 5 Character password
+	randID = random.randint(1,2)
+	if randID == 1:
+		rcl = random.choice(lower)
+		rcu = random.choice(upper)
+		rNum = random.choice(num)
+		password = rcl + rcu + rNum
+		print(password)
+	if randID == 2:
+		rcl = random.choice(upper)
+		rcu = random.choice(lower)
+		rNum = random.choice(num)
+		rcu2 = random.choice(lower)
+		rcl2 = random.choice(upper)
+		password = rcl + rcu + rNum + rcu2 + rcl2
+		print(password)
+def normalPass(): # Generates a 7 Character Password 
+	randID = random.randint(1,2)
+	if randID == 1:
+		specialS = random.choice(splitS)
+		rcl = random.choice(lower)
+		rcu = random.choice(upper)
+		rNum = random.choice(numS)
+		rcl1 = random.choice(upper)
+		rcu1 = random.choice(lower)
+		rNum1 = random.choice(numS)
+		
+		password = rcl + rcu + rNum + specialS + rcu1 + rNum1 + rcl1
+		print(password)
+	if randID == 2:
+		specialS = random.choice(splitS)
+		rcl = random.choice(upper)
+		rcu = random.choice(lower)
+		rNum = random.choice(numS)
+		rcl1 = random.choice(upper)
+		rcu1 = random.choice(lower)
+		rNum1 = random.choice(numS)
+		password = rNum + specialS + rcl + rcu + rcl1 + rcu1 + rNum1
+		print(password)
+def strongPass(): #Generates a 10 character Password
+	randID = random.randint(1,2)
+	if randID == 1:
+		specialS = random.choice(splitS)
+		rcl = random.choice(lower)
+		rcu = random.choice(upper)
+		rNum = random.choice(numS)
+		rcl1 = random.choice(upper)
+		rcu1 = random.choice(lower)
+		rNum1 = random.choice(numS)
+		rcl2 = random.choice(upper)
+		rcu2 = random.choice(lower)
+		rNum2 = random.choice(numS)
+		
+		password = rcl + rcu + rNum + specialS + rcu1 + rNum1 + rcl1 + rcu2 + rcl2 + rNum2
+		print(password)
+	if randID == 2:
+		specialS = random.choice(splitS)
+		rcl = random.choice(upper)
+		rcu = random.choice(lower)
+		rNum = random.choice(numS)
+		rcl1 = random.choice(upper)
+		rcu1 = random.choice(lower)
+		rNum1 = random.choice(numS)
+		rcl2 = random.choice(upper)
+		rNum2 = random.choice(numS)
+		rcu2 = random.choice(lower)
+		password = rNum + specialS + rcl + rcu + rcl1 + rcu1 + rNum1 + rcl2 + rNum2 + rcu2
+		print(password)
+
+
+
+if q == 'V' or q == 'v':
+	weakPass()	
+if q == 'W' or q == 'w': 
+	normalPass()
+if q == 'S' or q == 's':
+	strongPass()
+
+	
+
+
+	
