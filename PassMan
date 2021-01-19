@@ -148,7 +148,7 @@ def PassGen():
 		#Ex: q = ('Which method?')
 		#if q == '1':
 		#		method1()
-ascii_banner = pyf.figlet_format('Welcome to PassM!')
+ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
 time.sleep(3)
 clear = lambda: os.system('clear') # 'cls' if windows
