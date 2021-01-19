@@ -151,7 +151,11 @@ def PassGen():
 ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
 time.sleep(3)
-clear = lambda: os.system('clear') # 'cls' if windows
+q = input('Windows [W] or Linux? [L]')
+if q == 'l' or q == 'L':
+	clear = lambda: os.system('clear') # 'cls' if windows
+if q == 'w' or q == 'W':
+	clear = lambda: os.system('cls') # 'clear' if linux
 clear()
 q = input('')
 
