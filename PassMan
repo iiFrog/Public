@@ -4,122 +4,36 @@ import time
 from time import sleep
 import platform
 import os
-def method1():
-	l = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,q,y,z'
-	lower = l.split(',')
-	u = l.upper()
-	upper = u.split(',')
-	num = '1,2,3,4,5,6,7,8,9'
-	numS = num.split(',')
-	special = ",',-,_,+,=,\,',;,:,!,@,#,$,%,^,&,*,(,),?,/,<,>,."
-	splitS = special.split(',')
-	q = input('Generate a Weak password [V], a normal password [W], or a strong password [S]?\n')
-	def weakPass(): # Generates a weak 5 Character password
-		randID = random.randint(1,2)
-		if randID == 1:
-			rcl = random.choice(lower)
-			rcu = random.choice(upper)
-			rNum = random.choice(num)
-			password = rcl + rcu + rNum
-			print(password)
-		if randID == 2:
-			rcl = random.choice(upper)
-			rcu = random.choice(lower)
-			rNum = random.choice(num)
-			rcu2 = random.choice(lower)
-			rcl2 = random.choice(upper)
-			password = rcl + rcu + rNum + rcu2 + rcl2
-			print(password)
-	def normalPass(): # Generates a 7 Character Password 
-		randID = random.randint(1,2)
-		if randID == 1:
-			specialS = random.choice(splitS)
-			rcl = random.choice(lower)
-			rcu = random.choice(upper)
-			rNum = random.choice(numS)
-			rcl1 = random.choice(upper)
-			rcu1 = random.choice(lower)
-			rNum1 = random.choice(numS)
-			
-			password = rcl + rcu + rNum + specialS + rcu1 + rNum1 + rcl1
-			print(password)
-		if randID == 2:
-			specialS = random.choice(splitS)
-			rcl = random.choice(upper)
-			rcu = random.choice(lower)
-			rNum = random.choice(numS)
-			rcl1 = random.choice(upper)
-			rcu1 = random.choice(lower)
-			rNum1 = random.choice(numS)
-			password = rNum + specialS + rcl + rcu + rcl1 + rcu1 + rNum1
-			print(password)
-	def strongPass(): #Generates a 10 character Password
-		randID = random.randint(1,2)
-		if randID == 1:
-			specialS = random.choice(splitS)
-			rcl = random.choice(lower)
-			rcu = random.choice(upper)
-			rNum = random.choice(numS)
-			rcl1 = random.choice(upper)
-			rcu1 = random.choice(lower)
-			rNum1 = random.choice(numS)
-			rcl2 = random.choice(upper)
-			rcu2 = random.choice(lower)
-			rNum2 = random.choice(numS)
-			
-			password = rcl + rcu + rNum + specialS + rcu1 + rNum1 + rcl1 + rcu2 + rcl2 + rNum2
-			print(password)
-		if randID == 2:
-			specialS = random.choice(splitS)
-			rcl = random.choice(upper)
-			rcu = random.choice(lower)
-			rNum = random.choice(numS)
-			rcl1 = random.choice(upper)
-			rcu1 = random.choice(lower)
-			rNum1 = random.choice(numS)
-			rcl2 = random.choice(upper)
-			rNum2 = random.choice(numS)
-			rcu2 = random.choice(lower)
-			password = rNum + specialS + rcl + rcu + rcl1 + rcu1 + rNum1 + rcl2 + rNum2 + rcu2
-			print(password)
-
-
-	if q == 'V' or q == 'v':
-		weakPass()
-	if q == 'W' or q == 'w': 
-		normalPass()
-	if q == 'S' or q == 's':
-		strongPass()
-def method2():
-	lower = ['a','b','c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^',"&","*","(",")","-","_","+","=","''","[","]"]
-	var1 = random.choice(lower)
-	var2 = random.choice(lower)
-	var3 = random.choice(lower)
-	var4 = random.choice(lower)
-	var5 = random.choice(lower)
-	var6 = random.choice(lower)
-	var7 = random.choice(lower)
-	var8 = random.choice(lower)
-	var9 = random.choice(lower)
-	var10 = random.choice(lower)
-	var11= random.choice(lower)
-	var12 = random.choice(lower)
-	var13 = random.choice(lower)
-	var14 = random.choice(lower)
-	var15= random.choice(lower)
-	var16 = random.choice(lower)
-	q = input('Generate a Weak password [W], a normal password [N], or a strong password [S]?\n')
-	if q == 'W':
-		psw = var1 + var2 + var3 + var4
-		print('Your password is: '+psw)
-	if q == 'N':
-		psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8
-		print('Your password is: '+psw)
-	if q == 'S': 
-		psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8+var9+var10+var11+var12+var13+var14+var15+var16
-		print('Your password is: '+psw)
-
 def PassGen():
+		lower = ['a','b','c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^',"&","*","(",")","-","_","+","=","''","[","]"]
+		var1 = random.choice(lower)
+		var2 = random.choice(lower)
+		var3 = random.choice(lower)
+		var4 = random.choice(lower)
+		var5 = random.choice(lower)
+		var6 = random.choice(lower)
+		var7 = random.choice(lower)
+		var8 = random.choice(lower)
+		var9 = random.choice(lower)
+		var10 = random.choice(lower)
+		var11= random.choice(lower)
+		var12 = random.choice(lower)
+		var13 = random.choice(lower)
+		var14 = random.choice(lower)
+		var15= random.choice(lower)
+		var16 = random.choice(lower)
+		q = input('Generate a Weak password [W], a normal password [N], or a strong password [S]?\n')
+		if q == 'W' or q == 'w':
+			psw = var1 + var2 + var3 + var4
+			print('Your password is: '+psw)
+		if q == 'N' or q == 'n':
+			psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8
+			print('Your password is: '+psw)
+		if q == 'S' or q == 's': 
+			psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8+var9+var10+var11+var12+var13+var14+var15+var16
+			print('Your password is: '+psw)
+
+def PassSave():
 	w = open('accounts.txt', 'a')
 	user = input('[Dylan] or [Own]?\n')
 	if user == 'D' or user == 'd' or user == 'Dylan' or user == 'dylan':
@@ -152,11 +66,18 @@ def PassGen():
 ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
 time.sleep(2)
-
-if platform.system() == 'Linux':
-	clear = lambda: os.system('clear') # 'cls' if windows
-if platform.system() == 'Windows':
-	clear = lambda: os.system('cls') # 'clear' if linux
-clear()
-
+def main():
+	if platform.system() == 'Linux':
+		clear = lambda: os.system('clear') # 'cls' if windows
+	if platform.system() == 'Windows':
+		clear = lambda: os.system('cls') # 'clear' if linux
+	clear()
+	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3]\n')
+	if question == '1':
+		PassGen()
+		q = input('\n'  + 'Back to start [99]')
+		if q == '[0]':
+			main()
+	#if question == [finish later]
+main()
 
