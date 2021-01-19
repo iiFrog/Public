@@ -2,6 +2,7 @@ import random
 import pyfiglet as pyf
 import time
 from time import sleep
+import platform
 import os
 def method1():
 	l = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,q,y,z'
@@ -150,13 +151,12 @@ def PassGen():
 		#		method1()
 ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
-time.sleep(3)
-q = input('Windows [W] or Linux? [L]')
-if q == 'l' or q == 'L':
+time.sleep(2)
+
+if platform.system() == 'Linux':
 	clear = lambda: os.system('clear') # 'cls' if windows
-if q == 'w' or q == 'W':
+if platform.system() == 'Windows':
 	clear = lambda: os.system('cls') # 'clear' if linux
 clear()
-q = input('')
 
 
