@@ -4,7 +4,6 @@ import time
 from time import sleep
 import platform
 import os
-
 def backToStart():
 	q = input('\n'  + 'Back to start [0]')
 	if q == '0':
@@ -40,44 +39,24 @@ def PassGen():
 
 def PassSave():
 	w = open('accounts.txt', 'a')
-	user = input('[Dylan] or [Own]?\n')
-	if user == 'D' or user == 'd' or user == 'Dylan' or user == 'dylan':
-		with open('accounts.txt', 'a') as w:
-			cat = input('What would you like to categorize it as? [Numbers]')
-			w.write('------ [' + cat + ']')
-			website = input('What Site?\n')
-			w.write('------ ' + website + ' ------\n')
-			name = input('Which Email would you like to use?\n[Dylan] or [Blazing]?\n')
-			if name == 'D' or name == 'd' or name == 'Dylan' or     name == 'dylan':
-				name ='dylanchristopherbedi@gmail.com'
-				p = input('What is your password?\n')
-				w.write(name + ':' + p +'\n')
-				w.write('------------\n')
-			if name == 'B' or name == 'b' or name == 'Blazing' or name == 'blazing':
-				cat = input('What would you like to categorize it as? [Numbers]')
-				w.write('------ [' + cat + ']')	
-				name = 'blazingfuryplays@gmail.com'
-				p = input('What is your password?\n')
-				w.write(name + ':' + p + '\n')
-				w.write('------\n')
-				
-	if user == 'O' or user == 'o' or user == 'Own' or user == 'own':
-		with open('accounts.txt', 'a') as w:
-			cat = input('What would you like to categorize it as? [Numbers]\n')
-			w.write('------ [' + cat + ']\n')
-			website = input("What Site?\n")
-			w.write('------ ' + website + ' ------\n')
+	with open('accounts.txt', 'a') as w:
+			cat = input('What would you like to store it as? [Category] [Site] \n')
+			w.write('------ [' + cat + '] ' + ' ------\n')
 			name = input('What is your Username\Email?\n')
 			p = input('What is your password?\n')
 			w.write(name + ':' + p +'\n')
-			w.write('------------\n')
+			def space():
+				w.write('\n')
+			space()
+			space()
+			space()
 		#Add way to choose methods 
 		#Ex: q = ('Which method?')
 		#if q == '1':
-		#		method1()
+		#		method1 removed // Def couldn't take 80 lines if code in it 
 ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
-time.sleep(2)
+time.sleep(1)
 def main():
 	if platform.system() == 'Linux':
 		clear = lambda: os.system('clear') # 'cls' if windows
@@ -93,10 +72,20 @@ def main():
 	if question == '2':
 		PassSave()
 		backToStart()
-	if question == 'test':
-		PassView()
-	#if question == [finish later]
-main()
-# Password Viewer
 
+	def PassView():
+		q = input('What is your account stored as (number, category, etc?\n')
+		with open('accounts.txt', 'r') as r:
+			for line in r:
+				if q in line:
+					line1 = r.readline()
+					line2 = r.readline()
+					line3 = r.readline()
+					print(line2)
+					print(line3)
+	#if question == [finish later]
+	if question == '3':
+		PassView()
+		backToStart()
+main()
 
