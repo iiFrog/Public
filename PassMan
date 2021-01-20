@@ -4,6 +4,12 @@ import time
 from time import sleep
 import platform
 import os
+def PassView(): 
+	with open('accounts.txt') as r:
+		for line in r:
+			line = line.rstrip()
+			if "------ " in line:
+				print(line)
 def backToStart():
 	q = input('\n'  + 'Back to start [0]')
 	if q == '0':
@@ -42,6 +48,8 @@ def PassSave():
 	user = input('[Dylan] or [Own]?\n')
 	if user == 'D' or user == 'd' or user == 'Dylan' or user == 'dylan':
 		with open('accounts.txt', 'a') as w:
+			cat = input('What would you like to categorize it as? [Numbers]')
+			w.write('------ [' + cat + ']')
 			website = input('What Site?\n')
 			w.write('------ ' + website + ' ------\n')
 			name = input('Which Email would you like to use?\n[Dylan] or [Blazing]?\n')
@@ -51,12 +59,17 @@ def PassSave():
 				w.write(name + ':' + p +'\n')
 				w.write('------------\n')
 			if name == 'B' or name == 'b' or name == 'Blazing' or name == 'blazing':
+				cat = input('What would you like to categorize it as? [Numbers]')
+				w.write('------ [' + cat + ']')	
 				name = 'blazingfuryplays@gmail.com'
 				p = input('What is your password?\n')
 				w.write(name + ':' + p + '\n')
 				w.write('------\n')
+				
 	if user == 'O' or user == 'o' or user == 'Own' or user == 'own':
 		with open('accounts.txt', 'a') as w:
+			cat = input('What would you like to categorize it as? [Numbers]\n')
+			w.write('------ [' + cat + ']\n')
 			website = input("What Site?\n")
 			w.write('------ ' + website + ' ------\n')
 			name = input('What is your Username\Email?\n')
@@ -85,7 +98,10 @@ def main():
 	if question == '2':
 		PassSave()
 		backToStart()
-
+	if question == 'test':
+		PassView()
 	#if question == [finish later]
 main()
-# Begin Password Viewer later
+# Password Viewer
+
+
