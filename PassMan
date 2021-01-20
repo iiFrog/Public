@@ -4,12 +4,7 @@ import time
 from time import sleep
 import platform
 import os
-def PassView(): 
-	with open('accounts.txt') as r:
-		for line in r:
-			line = line.rstrip()
-			if "------ " in line:
-				print(line)
+
 def backToStart():
 	q = input('\n'  + 'Back to start [0]')
 	if q == '0':
