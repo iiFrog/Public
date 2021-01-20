@@ -84,6 +84,7 @@ def main():
 			main()
 	if question == '2':
 		PassSave()
+		backToStart()
 
 	#if question == [finish later]
 main()
