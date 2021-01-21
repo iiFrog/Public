@@ -20,4 +20,5 @@ My first ever actual Project. Saves it all to a .txt file :)
 A combination of both PassGen and PassSaver to create a Password Manager!
 
 Combined code of the two at 1-19-20 | Not functional yet
-100% Functional and working on 1-21-20
+
+100% Functional and working as ofa 1-21-20
