@@ -79,10 +79,7 @@ def main():
 			for line in r:
 				if q in line:
 					line1 = r.readline()
-					line2 = r.readline()
-					line3 = r.readline()
-					print(line2)
-					print(line3)
+					print(line1)
 	#if question == [finish later]
 	if question == '3':
 		PassView()
