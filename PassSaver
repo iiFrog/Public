@@ -1,26 +1,9 @@
 
 w = open('accounts.txt', 'a')
-user = input('[Dylan] or [Own]?\n')
-if user == 'D' or user == 'd' or user == 'Dylan' or user == 'dylan':
-  with open('accounts.txt', 'a') as w:
-    website = input('What Site?\n')
-    w.write('------ ' + website + ' ------\n')
-    name = input('Which Email would you like to use?\n[Dylan] or [Blazing]?\n')
-    if name == 'D' or name == 'd' or name == 'Dylan' or     name == 'dylan':
-      name ='dylanchristopherbedi@gmail.com'
-      p = input('What is your password?\n')
-      w.write(name + ':' + p +'\n')
-      w.write('------------\n')
-    if name == 'B' or name == 'b' or name == 'Blazing' or name == 'blazing':
-      name = 'blazingfuryplays@gmail.com'
-      p = input('What is your password?\n')
-      w.write(name + ':' + p + '\n')
-      w.write('------\n')
-if user == 'O' or user == 'o' or user == 'Own' or user == 'own':
-  with open('accounts.txt', 'a') as w:
-    website = input("What Site?\n")
-    w.write('------ ' + website + ' ------\n')
-    name = input('What is your Username\Email?\n')
-    p = input('What is your password?\n')
-    w.write(name + ':' + p +'\n')
-    w.write('------------\n')
+with open('accounts.txt', 'a') as w:
+	website = input("What Site?\n")
+	w.write('------ ' + website + ' ------\n')
+	name = input('What is your Username\Email?\n')
+	p = input('What is your password?\n')
+	w.write(name + ':' + p +'\n')
+	w.write('------------\n')
