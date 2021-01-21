@@ -16,7 +16,8 @@ Completed on 1 - 15 - 2021
 
 My first ever actual Project. Saves it all to a .txt file :)
 
-# 3. [PassMan] (name undecided)
+# 3. [PassMan] (https://github.com/iiFrog/Public/blob/main/PassMan)
 A combination of both PassGen and PassSaver to create a Password Manager!
 
 Combined code of the two at 1-19-20 | Not functional yet
+100% Functional and working on 1-21-20
