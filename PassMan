@@ -43,7 +43,7 @@ def PassSave():
 			cat = input('What would you like to store it as? [Category] [Site] \n')
 			w.write('------ [' + cat + '] ' + ' ------\n')
 			name = input('What is your Username\Email?\n')
-			p = input('What is your password?\n')
+			p = input('Would you like to enter in your own password [O], or generate a new one? [G]\n')
 			w.write(name + ':' + p +'\n')
 			def space():
 				w.write('\n')
@@ -79,10 +79,9 @@ def main():
 			for line in r:
 				if q in line:
 					line1 = r.readline()
-					print(line1)
+					print("\n" + "\n" + "Your account for "+ q +":" +"\n"+line1+"\n")
 	#if question == [finish later]
 	if question == '3':
 		PassView()
 		backToStart()
 main()
-
