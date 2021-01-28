@@ -4,28 +4,28 @@ import time
 from time import sleep
 import platform
 import os
+lower = ['a','b','c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^',"&","*","(",")","-","_","+","=","''","[","]"]
+var1 = random.choice(lower)
+var2 = random.choice(lower)
+var3 = random.choice(lower)
+var4 = random.choice(lower)
+var5 = random.choice(lower)
+var6 = random.choice(lower)
+var7 = random.choice(lower)
+var8 = random.choice(lower)
+var9 = random.choice(lower)
+var10 = random.choice(lower)
+var11= random.choice(lower)
+var12 = random.choice(lower)
+var13 = random.choice(lower)
+var14 = random.choice(lower)
+var15= random.choice(lower)
+var16 = random.choice(lower)
 def backToStart():
 	q = input('\n'  + 'Back to start [0]')
 	if q == '0':
 		main()
 def PassGen():
-		lower = ['a','b','c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^',"&","*","(",")","-","_","+","=","''","[","]"]
-		var1 = random.choice(lower)
-		var2 = random.choice(lower)
-		var3 = random.choice(lower)
-		var4 = random.choice(lower)
-		var5 = random.choice(lower)
-		var6 = random.choice(lower)
-		var7 = random.choice(lower)
-		var8 = random.choice(lower)
-		var9 = random.choice(lower)
-		var10 = random.choice(lower)
-		var11= random.choice(lower)
-		var12 = random.choice(lower)
-		var13 = random.choice(lower)
-		var14 = random.choice(lower)
-		var15= random.choice(lower)
-		var16 = random.choice(lower)
 		q = input('Generate a Weak password [W], a normal password [N], or a strong password [S]?\n')
 		if q == 'W' or q == 'w':
 			psw = var1 + var2 + var3 + var4
@@ -44,7 +44,18 @@ def PassSave():
 			w.write('------ [' + cat + '] ' + ' ------\n')
 			name = input('What is your Username\Email?\n')
 			p = input('Would you like to enter in your own password [O], or generate a new one? [G]\n')
-			w.write(name + ':' + p +'\n')
+			if p == "O" or p == "o":
+				w.write(name + ':' + p +'\n')
+			if p == "G" or p == "g":
+				q = input("Normal [N] or Strong [S]?")
+			if q == 'N' or q == 'n':
+				psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8
+				print('Your password is: '+psw)
+			if q == 'S' or q == 's': 
+				psw = var1 + var2 + var3 + var4 + var5+var6+var7+var8+var9+var10+var11+var12+var13+var14+var15+var16
+				print('Your password is: '+psw)
+
+				w.write(name + ":"+ psw +'\n')
 			def space():
 				w.write('\n')
 			space()
@@ -79,7 +90,7 @@ def main():
 			for line in r:
 				if q in line:
 					line1 = r.readline()
-					print("\n" + "\n" + "Your account for "+ q +":" +"\n"+line1+"\n")
+					print("\n" + "\n" + "Your account for "+ q +":" +"\n" + "\n" +line1+"\n")
 	#if question == [finish later]
 	if question == '3':
 		PassView()
