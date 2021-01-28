@@ -4,6 +4,10 @@ import time
 from time import sleep
 import platform
 import os
+if platform.system() == 'Linux':
+		clear = lambda: os.system('clear') # 'cls' if windows
+if platform.system() == 'Windows':
+		clear = lambda: os.system('cls') # 'clear' if linux
 lower = ['a','b','c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^',"&","*","(",")","-","_","+","=","''","[","]"]
 var1 = random.choice(lower)
 var2 = random.choice(lower)
@@ -22,7 +26,7 @@ var14 = random.choice(lower)
 var15= random.choice(lower)
 var16 = random.choice(lower)
 def backToStart():
-	q = input('\n'  + 'Back to start [0]')
+	q = input('\n'  + 'Back to start [0] \n')
 	if q == '0':
 		main()
 def PassGen():
@@ -41,9 +45,12 @@ def PassSave():
 	w = open('accounts.txt', 'a')
 	with open('accounts.txt', 'a') as w:
 			cat = input('What would you like to store it as? [Category] [Site] \n')
+			clear()
 			w.write('------ [' + cat + '] ' + ' ------\n')
 			name = input('What is your Username\Email?\n')
+			clear()
 			p = input('Would you like to enter in your own password [O], or generate a new one? [G]\n')
+			clear()
 			if p == "O" or p == "o":
 				w.write(name + ':' + p +'\n')
 			if p == "G" or p == "g":
@@ -76,11 +83,14 @@ def main():
 	clear()
 	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3]\n')
 	if question == '1':
+		clear()
 		PassGen()
 		q = input('\n'  + 'Back to start [0]')
 		if q == '0':
+			clear()
 			main()
 	if question == '2':
+		clear()
 		PassSave()
 		backToStart()
 
@@ -93,6 +103,7 @@ def main():
 					print("\n" + "\n" + "Your account for "+ q +":" +"\n" + "\n" +line1+"\n")
 	#if question == [finish later]
 	if question == '3':
+		clear()
 		PassView()
 		backToStart()
 main()
