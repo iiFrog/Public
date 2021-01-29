@@ -66,7 +66,8 @@ def PassSave():
 			p = input('Would you like to enter in your own password [O], or generate a new one? [G]\n')
 			clear()
 			if p == "O" or p == "o":
-				w.write(name + ':' + p +'\n')
+				q = input('What is your password?\n')
+				w.write(name + ':' + q +'\n')
 			if p == "G" or p == "g":
 				q = input("Normal [N] or Strong [S]?")
 			if q == 'N' or q == 'n':
