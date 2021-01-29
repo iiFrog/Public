@@ -4,6 +4,7 @@ import time
 from time import sleep
 import platform
 import os
+import sys
 if platform.system() == 'Linux':
 		clear = lambda: os.system('clear') # 'cls' if windows
 if platform.system() == 'Windows':
@@ -81,7 +82,7 @@ def main():
 	if platform.system() == 'Windows':
 		clear = lambda: os.system('cls') # 'clear' if linux
 	clear()
-	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3]\n')
+	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3]\n Exit [0]\n')
 	if question == '1':
 		clear()
 		PassGen()
@@ -93,6 +94,9 @@ def main():
 		clear()
 		PassSave()
 		backToStart()
+	if question == '0':
+		sys.exit()
+
 
 	def PassView():
 		q = input('What is your account stored as (number, category, etc?\n')
