@@ -1,0 +1,8 @@
+w = open('Test.txt','w')
+wr = open('Test.txt','r')
+w.write("Hello my name is Dylan, And i am 16")
+w.close()
+var = ["Hello and Goodbye \n Goodbye and Helloo"]
+for line in wr:
+	if re.search("Dylan", line):
+		print(line)
