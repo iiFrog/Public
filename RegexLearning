@@ -1,0 +1,5 @@
+import re
+var = ["Hello and Goodbye \n Goodbye and Hello"]
+for line in var:
+	if re.search("Hello", line):
+		print(line)
