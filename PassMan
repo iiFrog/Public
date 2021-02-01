@@ -104,7 +104,7 @@ def main():
 		q = input('\n'  + 'Back to start [0]')
 		if q == '0':
 			clear()
-			main()
+			exit()
 	if question == '2':
 		clear()
 		PassSave()
