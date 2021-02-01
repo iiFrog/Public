@@ -1,8 +1,15 @@
 
 #Personal
 
-1. Create a more efficient password saver (Shows in Terminal instead of on .txt)
+  ~~Create a more efficient password saver (Shows in Terminal instead of on .txt)~~
 
 # Public
 
 PasswordGen - Completed 
+
+  Extras:
+    Added:
+      * Added Exit Function for PassManager
+    Soon To Be Added:
+      * Use '+' or a space to call multiple accounts at once to be listed out
+    
