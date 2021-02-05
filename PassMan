@@ -131,6 +131,7 @@ def main():
 			for line in r:
 				if q in line:
 					line1 = r.writeline('                 ')
+					print('')
 					'''
 					
 main()
