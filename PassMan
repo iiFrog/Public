@@ -90,7 +90,7 @@ def PassSave():
 		#method1 removed // Def couldn't take 80 lines of code in it 
 ascii_banner = pyf.figlet_format('Welcome to PassMan!')
 print(ascii_banner + 'By Dylan Bedi')
-time.sleep(1)
+time.sleep(.885)
 #Main is the Main screen that will be called upon after 
 def main():
 	if platform.system() == 'Linux':
@@ -98,20 +98,18 @@ def main():
 	if platform.system() == 'Windows':
 		clear = lambda: os.system('cls') # 'clear' if linux
 	clear()
-	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3]\n Exit [0]\n')
+	question = input(' Password Generator [1]\n Password Saver [2]\n Password Viewer [3] \n Delete Password [4] \n Exit [0]\n')
 	if question == '1':
 		clear()
 		PassGen()
-		q = input('\n'  + 'Back to start [0]')
+		q = input('\n'  + 'Back to start [0]\n')
 		if q == '0':
-			clear()
-			exit()
+			main()
 	if question == '2':
 		clear()
 		PassSave()
 		backToStart()
-	if question == '0':
-		sys.exit()
+
 
 #PassView allows you to read your previously made accounts through the Terminal
 	def PassView():
