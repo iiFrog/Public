@@ -130,8 +130,8 @@ def main():
 		with open('accounts.txt','w') as r:
 			for line in r:
 				if q in line:
-					line1 = r.writeline('                 ')
-					print('')
+					line1 = r.writeline('                 '
+					print('Deleted Line!')
 					'''
 					
 main()
