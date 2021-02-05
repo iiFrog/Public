@@ -107,7 +107,7 @@ def main():
 			main()
 	if question == '2':
 		clear()
-		PassSave()
+		PassSave() 
 		backToStart()
 
 
@@ -120,8 +120,17 @@ def main():
 					line1 = r.readline()
 					print("\n" + "\n" + "Your account for "+ q +":" +"\n" + "\n" +line1+"\n")
 	#if question == [finish later]
+	''''
 	if question == '3':
 		clear()
 		PassView()
 		backToStart()
+	if question == '4':
+		q = input('What is the Category/Title?\n')
+		with open('accounts.txt','w') as r:
+			for line in r:
+				if q in line:
+					line1 = r.writeline('                 ')
+					'''
+					
 main()
