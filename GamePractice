@@ -1,0 +1,7 @@
+const = 0
+pname = input('What is your name?')
+p_location = '@'
+while const != 3:
+	const += 1
+	print('#####')
+
