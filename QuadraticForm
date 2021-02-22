@@ -1,0 +1,31 @@
+import math
+
+#nums()
+#Lambda Example
+x = lambda i: i + (10 * i)
+#print(x(5))
+
+#quad_form = -b + square root of b^2 - 4ac all divided by 2a
+
+
+def quad(a, b, c):
+	was_negative = False
+	ac = a * c
+	x = b**2 - 4*ac
+	if x < 0:
+		x = x * -1
+		was_negative == True
+	m = math.sqrt(x)
+	if (was_negative)== True:
+		m = m * -1
+	ta = 2 * a
+	quad1 = -(b) + m
+	quad2 = quad1 / ta
+	q2s = str(quad2)
+	quad3 = -(b) - m
+	quad4 = quad3 / ta
+	q3s = str(quad4)
+	print('First is ' + q2s + '\n' +'Second is ' + q3s)
+
+
+quad(1, 4, -5)
