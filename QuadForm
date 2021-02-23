@@ -6,7 +6,9 @@ x = lambda i: i + (10 * i)
 #print(x(5))
 
 #quad_form = -b + square root of b^2 - 4ac all divided by 2a
-
+a = int(input('What is A?\n'))
+b = int(input('What is B?\n'))
+c = int(input('What is C?\n'))
 
 def quad(a, b, c):
 	was_negative = False
@@ -28,4 +30,5 @@ def quad(a, b, c):
 	print('First is ' + q2s + '\n' +'Second is ' + q3s)
 
 
-quad(1, 4, -5)
+quad(a, b, c)
+
