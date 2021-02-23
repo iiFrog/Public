@@ -25,3 +25,8 @@ Combined code of the two at 1-19-20 | Not functional yet
  
 # 4. [QuadForm] (https://github.com/iiFrog/Public/blob/main/QuadForm)
  I made this during 7B today after realizing that in Algebra, there are many Formulas that are simply just plugging in numbers as the variables, and this can easily be done using Python. 
+
+Started 2-22-21 
+Finished 2-23-21
+
+Minor improvements may be made
