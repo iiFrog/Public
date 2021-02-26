@@ -1,0 +1,37 @@
+class SimpleClock:
+	import time
+	local = time.localtime()
+	clock = []
+	#debug = print("Debug:", local)
+	for line in local:
+		clock.append(line)
+		year = clock[0]
+	if clock[1] == 12:
+		clock[1] == 'December'
+	if clock[1] == 11:
+		clock[1] == 'November'
+	if clock[1] == 10:
+		clock[1] == 'October'
+	if clock[1] == 9:
+		clock[1] == 'September'
+	if clock[1] == 8:
+		clock[1] == 'August'
+	if clock[1] == 7:
+		clock[1] == 'July'
+	if clock[1] == 6:
+		clock[1] == 'June'
+	if clock[1] == 5:
+		clock[1] == 'May'
+	if clock[1] == 4:
+		clock[1] == 'April'
+		clock[1] == 'January'
+	if clock[1] == 2:
+		clock[1] = 'March'
+	print('Year:',year)
+	print('Month:',clock[1])
+	print('Day:',clock[2])
+	hour = clock[3]
+	hour = hour - 18
+	
+	print('Time:', hour, ':' ,clock[4])
+
