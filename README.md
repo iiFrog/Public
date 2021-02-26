@@ -30,3 +30,10 @@ Started 2-22-21
 Finished 2-23-21
 
 Minor improvements may be made
+# 5 [SimpleCalc] (https://github.com/iiFrog/Public/blob/main/SimpleClock)
+ A simple calculator.
+  * Made to be simple to copy and paste
+ Planning to implement into another project and/or make the clock real-time.
+
+Started 2-26-21 (8th Block)
+Finished 2-26-21 (8th Block)
