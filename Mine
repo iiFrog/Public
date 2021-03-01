@@ -1,0 +1,28 @@
+import pyautogui as gui
+import sys as s
+import tkinter as tk
+import time as t
+import pywinauto as auto
+def mStraight():
+	#center = x,y
+	#Switching to Minecraft (hopefully)
+	app = auto.Application()
+	ld = gui.mouseDown('left')
+	lu = gui.mouseUp('left')
+	#app.start(r"C:\PATH\TO\MC\")
+	app.MinecraftWindowTitle.SetFocus()
+	#gui.moveTo(center)
+	gui.press('esc')
+	stone = gui.locateCenterOnScreen('stone.png')
+	gui.moveTo(stone)
+	def mine():
+		ld
+		t.sleep('3')
+		lu
+	mine()
+	gui.dragRelative(-50,-50,duration=.3)
+	mine()
+	gui.dragRelative(50,50,duration=.3)
+mStraight()
+
+
