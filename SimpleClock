@@ -6,7 +6,6 @@ class SimpleClock:
 	for line in local:
 		clock.append(line)
 		year = clock[0]
-		tc = [7,1],[8,2],[9,3],[10,4],[11,5],[12,6],[13,7],[14,8],[15,9],[16,10],[17,11],[18,11],[19,12],[20,13],[21,14],[22,15],[23,16],[24,17]
 	if clock[1] == 12:
 		clock[1] == 'December'
 	if clock[1] == 11:
@@ -32,8 +31,7 @@ class SimpleClock:
 	print('Month:',clock[1])
 	print('Day:',clock[2])
 	hour = clock[3]
-	print(tc[:0])
-
-
+	hour = hour - 6
 	
 	print('Time:', hour, ':' ,clock[4])
+
