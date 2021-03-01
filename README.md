@@ -31,7 +31,7 @@ Finished 2-23-21
 
 Minor improvements may be made
 # 5. [SimpleCalc] (https://github.com/iiFrog/Public/blob/main/SimpleClock)
- A simple calculator.
+ A simple clock.
   * Made to be simple to copy and paste
  Planning to implement into another project and/or make the clock real-time.
 
