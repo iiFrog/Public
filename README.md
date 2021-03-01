@@ -37,3 +37,9 @@ Minor improvements may be made
 
 Started 2-26-21 (8th Block)
 Finished 2-26-21 (8th Block)
+
+#6. Mine (v1)
+A simple forward auto-miner for Minecraft.
+Indended to be an improved version of my first ever project using Python from over 6+ months ago.
+
+Started March 1st, 2021 (In 2A)
