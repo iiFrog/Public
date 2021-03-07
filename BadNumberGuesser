@@ -2,7 +2,10 @@ class Guessing():
 	import random
 	random_chat_long = ['You are way ahead!'],['You are far ahead!'],['You are incredibly far ahead!']
 	random_chat_medium = ['You are a medium distance ahead'],["You're around halfway ahead from the number!"]
-	random_chat_small = ['You are a small distance away!'],['You are very very close!'],['Almost there!']
+	random_chat_small = ['You are a small distance ahead!'],['You are very very close ahead!']
+	random_chat_long2 = ['You are way below!'],['You are far below!'],['You are incredibly far below!']
+	random_chat_medium2 = ['You are a medium distance below'],["You're around halfway below from the number!"]
+	random_chat_small2 = ['You are a small distance below!'],['You are very very close below!']
 	choice = input('Easy [E], Medium [M], or Hard [H]? ')
 	if choice == 'E' or choice == 'e':
 		range1 = 1,10
@@ -25,8 +28,14 @@ class Guessing():
 					print(random.choice(random_chat_medium))
 				elif y > random_num + 2 or y > random_num + 1:
 						print(random.choice(random_chat_small))
+				elif y > random_num - 5 or y > random_num - 4:
+					print(random.choice(random_chat_long2))
+				elif y > random_num - 2 or y > random_num - 1:
+						print(random.choice(random_chat_small2))
+				elif y > random_num - 3 or y > random_num - 2:
+			 			print(random.choice(random_chat_medium2))
 			if y == random_num:
-				print('You got the number!\n It was', 
+					print('You got the number!\n It was', 
 				random_num)
 	if mode == 2:
 		y = int(input('Enter a number!'))
