@@ -1,7 +1,7 @@
 class Guessing():
 	import random
-	random_chat_long = ['You are way off!'],['You are far away!'],['You are incredibly far off!']
-	random_chat_medium = ['You are a medium distance away'],["You're around halfway away from the number!"]
+	random_chat_long = ['You are way ahead!'],['You are far ahead!'],['You are incredibly far ahead!']
+	random_chat_medium = ['You are a medium distance ahead'],["You're around halfway ahead from the number!"]
 	random_chat_small = ['You are a small distance away!'],['You are very very close!'],['Almost there!']
 	choice = input('Easy [E], Medium [M], or Hard [H]? ')
 	if choice == 'E' or choice == 'e':
@@ -19,11 +19,11 @@ class Guessing():
 			y = int(input('Enter a number!'))
 			while y != random_num:
 				y = int(input('Enter a number!'))
-				if y > random_num + 5 or y > random_num + 4 or y > random_num - 5 or y > random_num -4:
+				if y > random_num + 5 or y > random_num + 4:
 					print(random.choice(random_chat_long))
-				if y > random_num + 3 or y > random_num + 2 or y > random_num - 3 or y > random_num -2:
+				elif y > random_num + 3 or y > random_num + 2:
 					print(random.choice(random_chat_medium))
-					if y > random_num - 2 or y > random_num + 2 or y > random_num + 1 or y > random_num - 1:
+				elif y > random_num + 2 or y > random_num + 1:
 						print(random.choice(random_chat_small))
 			if y == random_num:
 				print('You got the number!\n It was', 
@@ -33,7 +33,7 @@ class Guessing():
 		random_num = int(random.randint(1,50))
 		if y > random_num + 40 or y > random_num + 30:
 				print(random.choice(random_chat_long))
-		if y > random_num + 20 or y > random_num + 10:
+		elif y > random_num + 20 or y > random_num + 10:
 				print(random.choice(random_chat_medium))
 
 				
