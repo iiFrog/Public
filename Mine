@@ -1,4 +1,5 @@
 import pyautogui as gui
+import os 
 import sys as s
 import tkinter as tk
 import time as t
@@ -23,6 +24,29 @@ def mStraight():
 	gui.dragRelative(-50,-50,duration=.3)
 	mine()
 	gui.dragRelative(50,50,duration=.3)
-mStraight()
+def startServer():
+	app = auto.Application()
+	click = gui.click('left')
 
+	r = getTasks('javaw.exe')
+
+	if not r:
+		#If Minecraft is not Running:
+			print('%s - No such process' % ('Minecraft')) 
+
+	elif 'Not Responding' in r:
+		print('%s is Not responding' % ('Minecraft'))
+        
+	else:
+		#If Minecraft is already Running:
+			print('%s is Running or Unknown' % ('Minecraft'))
+			app.MinecraftWindowTitle.SetFocus()
+					#Capture a screenshot of the Full-Screen button. 
+			full_screen = gui.locateCenterOnScreen('full_btn.png')
+			gui.moveTo(full_screen)
+				#Hoping Click works, haven't looked up the pyautogui cheat-sheet yet.
+			click
+			#Haven't tested yet; still no time to check cheat-sheet
+			gui.moveTo('center')
+	
 
