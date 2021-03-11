@@ -46,11 +46,19 @@ def startServer():
 			gui.moveTo(full_screen)
 				#Hoping Click works, haven't looked up the pyautogui cheat-sheet yet.
 			click
+			esc = gui.locateCenterOnScreen('esc.png')
+			#create an esc.png
+			#use ',region(cordinates) after esc.png'
+			if esc is not None:
+				gui.press('esc')
+			else:
 			#Haven't tested yet; still no time to check cheat-sheet
 			gui.moveTo('center')
 			#Hopefully find Multiplayer
-			multiplayer = gui.locateCenterOnScreen('mult.png')
-			gui.moveTo(multiplayer)
-			click
+			def findMult():
+				multiplayer = gui.locateCenterOnScreen('mult.png')
+				gui.moveTo(multiplayer)
+				click
+
 			#Hoping that the user will be at the Multiplayer screen at this point into the program; HOPING!!! Still at school now. 
 	
