@@ -20,5 +20,5 @@ auto.click()
 auto.moveTo(bar)
 auto.click()
 auto.typewrite('discord.com',interval=.10)
-
+auto.press('enter')
 
