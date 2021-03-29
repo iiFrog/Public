@@ -1,8 +1,11 @@
 import pyautogui as auto
 #auto.screenshot(('top_left.png'),region=(-100,0,500,400))
+def click():
+	auto.click()
+	auto.click()
 top_left = auto.locateAll('firefox.png','top_left.png')
 firefox = auto.locateOnScreen('firefox.png',region=(-100,0,500,400))
 #print(firefox)
+#Moves to and clicks Firefox
 auto.moveTo(firefox)
-auto.click()
-auto.click()
+click()
