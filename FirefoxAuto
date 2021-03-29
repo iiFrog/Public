@@ -3,8 +3,9 @@ import pyautogui as auto
 def click():
 	auto.click()
 	auto.click()
-top_left = auto.locateAll('firefox.png','top_left.png')
+top_left = auto.locateAll('firefox.png','top_left.png') #<----- Example for finding a needle in a haystack image :)
 firefox = auto.locateOnScreen('firefox.png',region=(-100,0,500,400))
+new_tab = auto.locateOnScreen('new_tab.png'),region=(-100,0,1280,100)) #<--- Guessing since on School Laptop Right Now
 #print(firefox)
 #Moves to and clicks Firefox
 auto.moveTo(firefox)
@@ -14,6 +15,10 @@ auto.moveTo(bar)
 auto.click()
 auto.typewrite('youtube.com',interval=.10)
 auto.press('enter')
-
+auto.moveTo(new_tab)
+auto.click()
+auto.moveTo(bar)
+auto.click()
+auto.typewrite('discord.com',interval=.10)
 
 
