@@ -45,7 +45,7 @@ Finished 2-26-21 (8th Block)
 Started March 1st, 2021 (In 2A)
 
 # 7. [Firefox Auto] (https://github.com/iiFrog/Public/blob/main/FirefoxAuto)
- Made yesterday, started on my school-issued laptop in my last period, and finished upon getting home
+ Made yesterday [March 30th, 2021] , started on my school-issued laptop in my last period, and finished upon getting home
  and being able to use it on my actual laptop. 
  
  It automatically screenshots and uses the top portion of your/my laptop and uses it to Click on Firefox and open up Youtube and Discord, the main two websites I use.
