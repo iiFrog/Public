@@ -1,24 +1,33 @@
 import pyautogui as auto
-#auto.screenshot(('top_left.png'),region=(-100,0,500,400))
+import keyboard as key
+import time
+from time import sleep
 def click():
 	auto.click()
 	auto.click()
 top_left = auto.locateAll('firefox.png','top_left.png') #<----- Example for finding a needle in a haystack image :)
 firefox = auto.locateOnScreen('firefox.png',region=(-100,0,500,400))
-new_tab = auto.locateOnScreen('new_tab.png'),region=(-100,0,1280,100)) #<--- Guessing since on School Laptop Right Now
 #print(firefox)
 #Moves to and clicks Firefox
 auto.moveTo(firefox)
 click()
-bar = #coordinates for address bar
+bar = 291,52
 auto.moveTo(bar)
+time.sleep(.9)
+auto.screenshot(('new_tab.png'),region=(-30,0,1396,35))
+new_tab = auto.locateOnScreen('new_tab_plus.png',region=(-30,0,1396,35))
+print(new_tab)
 auto.click()
-auto.typewrite('youtube.com',interval=.10)
+key.write('youtube.com')
 auto.press('enter')
 auto.moveTo(new_tab)
 auto.click()
 auto.moveTo(bar)
 auto.click()
-auto.typewrite('discord.com',interval=.10)
+key.write('discord.com')
 auto.press('enter')
-
+time.sleep(.5)
+auto.moveTo(1207,116)
+time.sleep(1.2)
+auto.click()
+auto.moveTo(690,350)
