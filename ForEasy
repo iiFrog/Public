@@ -1,7 +1,22 @@
+'''
 import turtle
 for i in range(4):
 	turtle.forward(50)
 	turtle.left(90)
+'''
+import turtle
+def square50():
+	for i in range(4):
+		turtle.forward(50)
+		turtle.left(90)
+square50()
+turtle.left(180)
+turtle.forward(20)
+turtle.right(90)
+for i in range(4):
+	turtle.forward(50)
+	turtle.left(90)
+	
   
   #Just learned how to use the For Statement to turn things that would be maybe 8 lines of code into 4 lines
   # LESS WORK!!!
