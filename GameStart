@@ -1,0 +1,32 @@
+import getpass
+import time
+import os
+from os import system,name
+#accounts
+def accs():
+	w = open('accounts.txt', 'a')
+	with open('accounts.txt', 'a') as w:
+		user = input('What is your Username?\n')
+		w.write('------ ' + user + ' ------\n')
+		password = getpass.getpass(prompt = 'Password: \n')
+		w.write(user + ':' + password +'\n')
+		w.write('------------\n')
+def clear():
+	if name == 'nt':
+		_ = system('cls')
+  
+    # for mac and linux(here, os.name is 'posix')
+	else:
+		_ = system('clear')
+text = 'Welcome to _____ !'
+print(text)
+time.sleep(2)
+clear()
+def main():
+	print('1) Sign In\n2)Register\n')
+	main = input()
+	if main == '2':
+		clear()
+		accs()
+		main()
+main()
