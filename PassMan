@@ -114,13 +114,19 @@ def main():
 
 #PassView allows you to read your previously made accounts through the Terminal
 	def PassView():
-		q = input('What is your account stored as (number, category, etc [Case Sensitive]?\n')
-		with open('accounts.txt', 'r') as r:
-			for line in r:
-				if q in line:
-					line1 = r.readline()
-					print("\n" + "\n" + "Your account for "+ q +":" +"\n" + "\n" +line1+"\n")
-	#if question == [finish later]
+		q = input('[1] Read all accounts \n[2] Read one account?\n')
+		if q == '2':
+			read = input('What is your account stored as (number, category, etc [Case Sensitive]?\n')
+			with open('accounts.txt', 'r') as r:
+				for line in r:
+					if read in line:
+						line1 = r.readline()
+						print("\n" + "\n" + "Your account for "+ q +":" +"\n" + "\n" +line1+"\n")
+
+		if q == '1':
+			with open('accounts.txt','r') as r:
+				for line in r:
+					print(line)
 	
 	if question == '3':
 		clear()
