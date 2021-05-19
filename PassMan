@@ -114,7 +114,7 @@ def main():
 
 #PassView allows you to read your previously made accounts through the Terminal
 	def PassView():
-		q = input('What is your account stored as (number, category, etc?\n')
+		q = input('What is your account stored as (number, category, etc [Case Sensitive]?\n')
 		with open('accounts.txt', 'r') as r:
 			for line in r:
 				if q in line:
@@ -126,6 +126,7 @@ def main():
 		clear()
 		PassView()
 		backToStart()
+main()
 '''
 	if question == '4':
 		q = input('What is the Category/Title?\n')
